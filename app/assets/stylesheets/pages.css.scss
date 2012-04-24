@@ -1,195 +1,7 @@
 @import "bootstrap";
 
-/* mixins, variables, etc. */
-
-$grayMediumLight: #eaeaea;
-$inpink: rgb(250, 25, 125);
-$inblue: rgb(48, 135, 178);
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* universal */
-
-html {
-  overflow-y: scroll;
-}
-
-body {
-  background-image: url(brushed_alu.png);
-  padding-top: 90px;
-
-  &.eng {
-    font-family: "deja-rip";
-  }
-}
-
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-
-  h1 {
-    margin-bottom: 10px;
-  }
-}
-
-::selection {
-  background: #FA197D;
-  color: white;
-  text-shadow: none;
-}
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $grayLight;
-}
-
-h3 {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 25px;
-  font-weight: normal;
-  line-height: 130%;
-  text-shadow: 2px 2px 2px #E6E6E6;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-h4 {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 23px;
-  font-weight: normal;
-  line-height: 130%;
-  text-shadow: 2px 2px 2px #E6E6E6;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-h5 {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 19px;
-  font-weight: normal;
-  line-height: 130%;
-  text-shadow: 2px 2px 2px #E6E6E6;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
-.eng h1, .eng h2, .eng h3, .eng h4, .eng h5 {
-  font-family: "nimbus-sans";
-}
-
-.eng .nav a {
-  font-family: "nimbus-sans";
-}
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  padding: 10px;
-  height: auto;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
-
-#error_explanation {
-  color: #f00;
-  ul {
-    list-style: none;
-    margin: 0 0 18px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
-}
-
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  padding-bottom: 5px;
-  line-height: 1;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.navbar {
-  a {
-    color: $grayLighter !important;
-    font-size: 22px;
-
-    &:hover {
-      color: rgb(250, 25, 125) !important;
-    }
-  }
-
-  ul {
-    margin-top: 15px !important;
-  }
-}
-
-.navbar-inner {
-  @include gradient-vertical(#4e4e4e, #1b1b1b);
-}
-
-/* footer */
-
-footer {
-  margin-top: 25px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-
-  .in_reply_logo2 {
-    background: url(logo2.png) -4px 0;
-    height: 34px;
-    width: 84px;
-    text-indent: -9999px;
-    display: block;
-    cursor: pointer;
-  }
-}
-
 /* main */
+
 .main {
   background: white;
   padding: 20px;
@@ -208,49 +20,69 @@ footer {
   }
 }
 
+.txt {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* home */
+
 .col {
   float: left;
   padding: 0 0 0 55px;
   font-size: 14px;
 
   &.col1 {
-    background: url(/images/number1.jpg) no-repeat 0 0;
+    background: url(number1.jpg) no-repeat 0 0;
     width: 225px;
     margin: 0 27px 0 0;
   }
 
   &.col2 {
-    background: url(/images/number2.jpg) no-repeat 0 0;
+    background: url(number2.jpg) no-repeat 0 0;
     width: 255px;
     margin: 0 27px 0 0;
   }
 
   &.col3 {
     width: 190px;
-    background: url(/images/number3.jpg) no-repeat 0 0;
+    background: url(number3.jpg) no-repeat 0 0;
   }
 }
 
-.txt {
-  font-size: 16px;
-  line-height: 22px;
-}
+/* pricing */
 
-/* miscellaneous */
-
-.r {
-  color: $inpink;
-}
-
-.b {
-  color: $inblue;
-}
-
-.debug_dump {
-  clear: both;
+.pricingPluses {
   float: left;
-  width: 100%;
-  display: none;
-  margin-top: 20px;
-  @include box_sizing;
+  width: 650px;
+  font-size: 15px;
+  line-height: 26px;
+  margin-right: 25px;
+}
+
+.pricingPlus {
+  margin-right: 6px;
+  position: relative;
+}
+
+.pricingPrice {
+  float: left;
+  text-align: center;
+}
+
+.curr {
+  font-size: 38px !important;
+}
+
+.price1 {
+  font-size: 78px;
+  line-height: 70px;
+  font-family: sans-serif;
+  text-shadow: #555 1px 1px 3px;
+}
+
+.price2 {
+  text-shadow: #e3e3e3 1px 1px 1px;
+  color: #555;
+  font-style: italic;
 }
