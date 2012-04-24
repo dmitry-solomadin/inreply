@@ -146,6 +146,9 @@ input, textarea, select, .uneditable-input {
   font-size: 1.7em;
   padding-bottom: 5px;
   line-height: 1;
+  img {
+    height: 50px;
+  }
 
   &:hover {
     text-decoration: none;
@@ -153,9 +156,9 @@ input, textarea, select, .uneditable-input {
 }
 
 .navbar {
-  a {
+  a.menu {
     color: $grayLighter !important;
-    font-size: 22px;
+    font-size: 20px;
 
     &:hover {
       color: rgb(250, 25, 125) !important;
@@ -163,7 +166,13 @@ input, textarea, select, .uneditable-input {
   }
 
   ul {
-    margin-top: 15px !important;
+    margin-top: 7px !important;
+  }
+
+  .caret {
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    border-top: 6px solid white !important;
   }
 }
 
