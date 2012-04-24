@@ -3,6 +3,8 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$inpink: rgb(250, 25, 125);
+$inblue: rgb(48, 135, 178);
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -172,26 +174,18 @@ input, textarea, select, .uneditable-input {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 25px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
+
+  .in_reply_logo2 {
+    background: url(logo2.png) -4px 0;
+    height: 34px;
+    width: 84px;
+    text-indent: -9999px;
+    display: block;
+    cursor: pointer;
   }
 }
 
@@ -204,10 +198,14 @@ footer {
   @include box-shadow(0 0 5px #a1a1a1);
 }
 
-.box-content {
+.box_content {
   background: url(hr1.png) no-repeat 120px 100%;
   padding-top: 15px;
   padding-bottom: 25px;
+
+  &.none {
+    background: none;
+  }
 }
 
 .col {
@@ -240,10 +238,19 @@ footer {
 
 /* miscellaneous */
 
+.r {
+  color: $inpink;
+}
+
+.b {
+  color: $inblue;
+}
+
 .debug_dump {
   clear: both;
   float: left;
   width: 100%;
-  margin-top: 45px;
+  display: none;
+  margin-top: 20px;
   @include box_sizing;
 }
