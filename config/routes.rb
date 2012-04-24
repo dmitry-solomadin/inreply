@@ -1,4 +1,10 @@
 Inreply::Application.routes.draw do
+
+  root to: "pages#home"
+
+  match "/whyUs", to: "pages#whyUs"
+  match "/pricing", to: "pages#pricing"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

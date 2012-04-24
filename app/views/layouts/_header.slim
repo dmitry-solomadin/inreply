@@ -1,0 +1,11 @@
+header.navbar.navbar-fixed-top
+  div.navbar-inner
+    div.container
+      = link_to image_tag("logo.png", alt: "in:reply"), '/', id:"logo"
+      nav
+        ul.nav.pull-right
+          li = link_to( "About", root_path )
+          li = link_to( "Why us", "#" )
+          li = link_to( "Price", "#" )
+          li = link_to( "Contacts", "#" )
+          li = link_to( "Log in", "#" )
