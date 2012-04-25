@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background-image: url(brushed_alu.png);
+  background-image: url(snow.png);
   padding-top: 90px;
 
   &.eng {
@@ -167,12 +167,6 @@ input, textarea, select, .uneditable-input {
 
   ul {
     margin-top: 7px !important;
-  }
-
-  .caret {
-    border-left: 6px solid transparent !important;
-    border-right: 6px solid transparent !important;
-    border-top: 6px solid white !important;
   }
 }
 

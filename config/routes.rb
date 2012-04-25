@@ -2,7 +2,10 @@ Inreply::Application.routes.draw do
 
   root to: "pages#home"
 
-  match "/whyUs", to: "pages#whyUs"
+  resources :contacts, only: [:new, :create]
+
+  match '/contacts',  to: 'contacts#new'
+  match "/why_us", to: "pages#why_us"
   match "/pricing", to: "pages#pricing"
 
   # The priority is based upon order of creation:

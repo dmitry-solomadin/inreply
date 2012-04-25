@@ -1,0 +1,25 @@
+div.box_content
+  h3 Let us know how we can help!
+
+  div.txt
+    ' Have any questions or comments? Want to know more about in:reply?
+      Simply fill in our contact form below. We'll get in touch with you soon!
+      Prefer to get in touch with us directly? Feel free to email us at
+      info.inreply@gmail.com
+
+  h3.contact-heading We want to make your business <span class='r'>better</span>!
+
+= form_tag contacts_path, class: "form-horizontal contact-form" do
+  fieldset
+    div.control-group
+      = label_tag :email, nil, class: "control-label"
+      div.controls
+        = text_field_tag :email
+
+    div.control-group
+      = label_tag :message, nil, class: "control-label"
+      div.controls
+        = text_area_tag :message
+
+    div.form-actions
+      = submit_tag "Send", class: "btn btn-large btn-primary"
