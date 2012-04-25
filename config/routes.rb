@@ -1,12 +1,18 @@
 Inreply::Application.routes.draw do
 
-  root to: "pages#home"
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+    root to: "pages#home"
 
-  resources :contacts, only: [:new, :create]
+    resources :contacts, only: [:new, :create]
 
-  match '/contacts',  to: 'contacts#new'
-  match "/why_us", to: "pages#why_us"
-  match "/pricing", to: "pages#pricing"
+    match '/contacts', to: 'contacts#new'
+    match "/why_us", to: "pages#why_us"
+    match "/pricing", to: "pages#pricing"
+  end
+
+  match '*path', to: redirect("/#{I18n.default_locale}/%{path}"),
+        constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
+  match '', to: redirect("/#{I18n.default_locale}")
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

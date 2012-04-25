@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+//@mixin transition($transition: all linear .2s) {
+  /*-webkit-transition: $transition;*/
+  /*-moz-transition: $transition;*/
+  /*transition: $transition;*/
+/*}*/
+
 /* main */
 
 .main {
@@ -104,6 +110,16 @@
 .contact-form {
   margin-top: 20px;
   width: 500px;
+
+  .control-group {
+    padding: 10px 10px 10px 0 !important;
+    margin-bottom: 0px !important;
+    @include transition(background .4s);
+  }
+
+  .form-actions {
+    margin-top: 0 !important;
+  }
 }
 
 .contact-form textarea {
@@ -113,3 +129,4 @@
 .contact-heading {
   margin-top: 20px;
 }
+

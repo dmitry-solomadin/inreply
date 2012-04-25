@@ -13,5 +13,7 @@ header.navbar.navbar-fixed-top
           li#fat-menu.dropdown
             a.dropdown-toggle href="#" data-toggle="dropdown" Language <b class="caret"></b>
             ul.dropdown-menu
-              li: a English
-              li: a Russian
+              li
+                = link_to "English", locale: "en"
+              li
+                = link_to "Russian", locale: "ru"
