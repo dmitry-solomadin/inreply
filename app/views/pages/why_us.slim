@@ -1,40 +1,50 @@
 div.box_content
-  h3 Goal of our service
+  h3 = t ".header"
   div.txt
-    ' The main goal is to <span class="r">help your business</span> acquire loyal clients.
+    = t ".desc_html"
     br
     br
-    ' Also we will help you in following:
+    = t ".also"
     br
 
     div.txt
       div.whyRow
         = image_tag "tick-white.png", alt: "plus", class: "pricingPlus"
-        ' know what you customers think about;
+        = t ".why1"
       div.whyRow
         = image_tag "tick-white.png", alt: "plus", class: "pricingPlus"
-        ' know who exactly in your personnel works good and who need to work better in order to get new clients.
+        = t ".why2"
       div.whyRow
         = image_tag "tick-white.png", alt: "plus", class: "pricingPlus"
-        ' collect clients information database easy and fast;
+        = t ".why3"
       div.whyRow
         = image_tag "tick-white.png", alt: "plus", class: "pricingPlus"
-        ' increase clients loyalty;
+        = t ".why4"
       div.whyRow
         = image_tag "tick-white.png", alt: "plus", class: "pricingPlus"
-        ' know clients opinion on any question
+        = t ".why5"
 
 div.box_content.none
-  h3 <span class="r">7 reasons</span> to use our service:
+  h3 = t ".reasons_html"
   div.txt
     div.whyRow2
-      ' <b class="r">1.</b>&nbsp;Easy and fast way to do a marketing research.
+      span.r 1.&nbsp;
+      = t ".reason1_html"
     div.whyRow2
-      ' <b class="r">2.</b>&nbsp;Convenient and cheap way to know information about service level in your
-      business from your clients without "Secret Shoppers". Easy way to learn about problems in service.
+      span.r 2.&nbsp;
+      = t ".reason2_html"
     div.whyRow2
-      ' <b class="r">3.</b>&nbsp;Easy way to acquire client information database that you can
-      in future inform about sales/new services.
+      span.r 3.&nbsp;
+      = t ".reason3_html"
     div.whyRow2
-      ' <b class="r">4.</b>&nbsp;Communication channel between clients and company managers.
-
+      span.r 4.&nbsp;
+      = t ".reason4_html"
+    div.whyRow2
+      span.r 5.&nbsp;
+      = t ".reason5_html"
+    div.whyRow2
+      span.r 6.&nbsp;
+      = t ".reason6_html"
+    div.whyRow2
+      span.r 7.&nbsp;
+      = t ".reason7_html"

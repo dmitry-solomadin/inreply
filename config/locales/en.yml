@@ -1,4 +1,22 @@
 en:
+  error_messages:
+    correct: "Please, correct next errors:"
+  errors:
+    messages:
+      blank: "can't be blank!"
+  activemodel:
+    attributes:
+      contact_message:
+        email: Email
+        message: Message
+  layouts:
+    header:
+      about: About
+      why_us: Why us
+      price: Price
+      contacts: Contacs
+      log_in: Log in
+      registration: Sign up
   pages:
     home:
       start_header_html: Start <span class="r">listening</span> to your clients today!
@@ -24,5 +42,47 @@ en:
       how_much_answer_html: in:reply &mdash; is a tool that will increase
                              sales amount and get super loyal customers and this is priceless for any business.
                              Nevertheless the price is 20$ per month per location.
-
-
+    pricing:
+      header_html: Subscribing to in:reply is like buying a <span class='r'>data plan</span> for customer feedback.
+      desc: Stay with us as long as you like. There's no commitment and you can cancel at any time.
+      plans_include: All in:reply subscription plans include
+      plans1: Your own in:reply text messaging number
+      plans2: Signage and window decals to let your customers know you use in:reply
+      plans3: Discount on sign manufacturing
+      plans4: Support from in:reply sales team.
+      per_month: per month
+      per_location: per location
+      reg: Registration
+      curr_a: 25
+      curr: $
+    why_us:
+      header: Goal of our service
+      desc_html: The main goal is to <span class="r">help your business</span> acquire loyal clients.
+      also: 'Also we will help you in following:'
+      why1: know what you customers think about;
+      why2: know who exactly in your personnel works good and who need to work better in order to get new clients.
+      why3: collect clients information database easy and fast;
+      why4: increase clients loyalty;
+      why5: know clients opinion on any question
+      reasons_html: '<span class="r">7 reasons</span> to use our service:'
+      reason1_html: Easy and fast way to do a marketing research.
+      reason2_html: Convenient and cheap way to know information about service level in your
+                    business from your clients without "Secret Shoppers". Easy way to learn about problems in service.
+      reason3_html: Easy way to acquire client information database that you can
+                    in future inform about sales/new services.
+      reason4_html: Communication channel between clients and company managers.
+      reason5_html: Most people are not brave enough to complaint to waiter or to suggest you
+                    some new cool thing but everybody can do this via sms.
+      reason6_html: There is no more need to fill huge forms with thousands of questions you can just ask
+                    clients about anything and get replies.
+      reason7_html: When you use in:reply the clients will know that you are really listening.
+  contacts:
+    new:
+      header: Let us know how we can help!
+      questions_html: 'Have any questions or comments? Want to know more about in:reply?
+                       Simply fill in our contact form below. We`ll get in touch with you soon!
+                       Prefer to get in touch with us directly Feel free to email us at
+                       info.inreply@gmail.com'
+      better_html: We want to make your business <span class='r'>better</span>!
+      send: Send
+      flash_success: Email has been successfully sent.

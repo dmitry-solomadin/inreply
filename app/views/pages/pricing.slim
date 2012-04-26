@@ -1,33 +1,36 @@
 div.box_content
-  h3 Subscribing to in:reply is like buying a <span class='r'>data plan</span> for customer feedback.
+  h3 = t ".header_html"
   div.txt
-    ' Stay with us as long as you like. There's no commitment and you can cancel at any time.
+    = t ".desc"
 
 div.box_content.none
-  h3 All in:reply subscription plans include
+  h3 = t ".plans_include"
 
   div.txt.pricingPluses
     = image_tag "plus-circle.png", alt: "plus", class: "pricingPlus"
-    ' Your own in:reply text messaging number
+    = t ".plans1"
     br
     = image_tag "plus-circle.png", alt: "plus", class: "pricingPlus"
-    ' Signage and window decals to let your customers know you use in:reply
+    = t ".plans2"
     br
     = image_tag "plus-circle.png", alt: "plus", class: "pricingPlus"
-    ' Discount on sign manufacturing
+    = t ".plans3"
     br
     = image_tag "plus-circle.png", alt: "plus", class: "pricingPlus"
-    ' Support from in:reply sales team.
+    = t ".plans4"
     br
 
   div.pricingPrice
     div.price1.b
-      ' 25<span class="curr">$</span>
+      = t ".curr_a"
+      span.curr = t ".curr"
+
     div.price2
-      ' per month
+      = t ".per_month"
     div.price2
-      ' per location
+      = t ".per_location"
   div style="clear: both;"
 
-a.btn.btn-large.btn-primary Registration
+a.btn.btn-large.btn-primary
+  = t ".reg"
 
