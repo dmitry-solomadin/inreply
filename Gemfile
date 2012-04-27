@@ -9,7 +9,7 @@ gem 'bootstrap-sass'
 gem 'pg'
 gem 'slim'
 gem 'json'
-gem 'bcrypt-ruby'
+gem 'client_side_validations'
 
 # Gems used only for assets and not required
 # in production environments by default.

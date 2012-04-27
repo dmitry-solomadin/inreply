@@ -10,6 +10,7 @@ ru:
               blank: не может быть пустым
             email:
               blank: не может быть пустым
+              email_format: введите правильный e-mail
     attributes:
       contact_message:
         email: Email

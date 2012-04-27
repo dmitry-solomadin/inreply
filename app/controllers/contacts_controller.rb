@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @message = ContactMessage.new(params[:message])
+    @message = ContactMessage.new(params[:contact_message])
 
     if @message.valid?
       ContactMailer.contact(@message).deliver
@@ -18,13 +18,22 @@ end
 
 class ContactMessage
   include ActiveModel::Validations
+  include ActiveModel::Conversion
+  extend ActiveModel::Naming
 
   attr_accessor :email, :message
   validates_presence_of :email, :message
+  validates :email, email_format: true
 
   def initialize(attributes={})
     attributes.each do |name, value|
       send("#{name}=", value)
     end
   end
+
+  def persisted?
+    false
+  end
 end
+
+

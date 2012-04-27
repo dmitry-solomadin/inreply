@@ -4,6 +4,7 @@ en:
   errors:
     messages:
       blank: "can't be blank!"
+      email_format: "is not formatted properly"
   activemodel:
     attributes:
       contact_message:
