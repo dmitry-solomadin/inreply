@@ -1,0 +1,25 @@
+div#wrapper_login
+  div#wrapper_login_logo
+    = link_to "in:reply", root_path, class: "inreply_logo_login"
+
+  div style="clear:both;"
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {id: "login_form"}) do |f|
+    div.login_box
+      h4 qwe
+      table.form.formround.formlogin cellspacing="10"
+        tr
+          td
+            = f.label :email
+          td
+            = f.email_field :email
+        tr
+          td
+            = f.label :password
+          td
+            = f.password_field :password
+      div style="text-align: right;"
+        a href="javascript:showForgotPass();" class="forgotPassLink"
+          ' forgot pass
+      = f.submit "Sign in"
+
+      div style="clear:both;"

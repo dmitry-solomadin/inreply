@@ -1,7 +1,8 @@
 Inreply::Application.routes.draw do
-
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
     root to: "pages#home"
+
+    devise_for :users, controllers: {sessions: "users/sessions"}
 
     resources :contacts, only: [:new, :create]
 

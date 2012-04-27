@@ -1,0 +1,45 @@
+@import 'bootstrap';
+
+body {
+  background-image: url(denim.png);
+}
+
+#wrapper_login {
+  margin: 0 auto;
+  overflow: visible;
+  width: 960px;
+  text-align: center;
+
+  #wrapper_login_logo {
+    width: 420px;
+  }
+}
+
+.inreply_logo_login {
+  background: url(/images/logo.png) -12px 0;
+  display: block;
+  height: 70px;
+  text-indent: -9999px;
+  width: 200px;
+  float: left;
+  cursor: pointer;
+  margin-top: 100px;
+  margin-left: 120px;
+}
+
+.login_box {
+  background-color: white;
+  margin-top: 10px;
+  width: 420px;
+  height: 210px;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: #fff 0px 0px 5px;
+  border: 1px solid #a1a1a1;
+}
+
+#login_form {
+  float: left;
+  position: relative;
+  left: 255px;
+}
