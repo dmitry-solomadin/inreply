@@ -16,6 +16,8 @@ ru:
         email: Email
         message: Сообщение
   layouts:
+    public:
+      title: in:reply — начните слушать своих клиентов!
     header:
       about: О сервисе
       why_us: Почему мы

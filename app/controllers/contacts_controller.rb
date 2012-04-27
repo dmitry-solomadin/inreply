@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  layout 'public'
+
   def new
     @message = ContactMessage.new
   end
