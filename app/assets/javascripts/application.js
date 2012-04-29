@@ -17,6 +17,14 @@
 //= require rails.validations.custom
 //= require_directory .
 
+$(document).bind('ajaxSend', function(e, request, options) {
+    $('[data-loading-text]').button('loading');
+});
+
+$(document).bind('ajaxComplete', function(e, request, options) {
+    $('[data-loading-text]').button('complete');
+});
+
 
 
 

@@ -1,0 +1,5 @@
+window.flash.use("#forgot_flash").discard()
+
+<% flash.each do |key, value| %>
+window.flash.add("<%= value %>", "<%= key %>");
+<% end %>

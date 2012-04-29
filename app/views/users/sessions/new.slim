@@ -8,8 +8,7 @@ div#wrapper_login
     = form_for(resource, :as => resource_name, :url => session_path(resource_name),
                :html => {id: "login_form", class: "form-horizontal"}) do |f|
       fieldset
-        - flash.each do |key, value|
-          = content_tag :div, value, class: "alert alert-#{key}"
+        = render 'layouts/flash', flash: flash
         div.control-group
           = f.label :email, nil, class: "control-label"
           div.controls
@@ -19,8 +18,21 @@ div#wrapper_login
           div.controls
             = f.password_field :password
       div style="text-align: right;"
-        a href="javascript:showForgotPass();" class="forgot_pass_link"
+        a href="#" class="forgot_pass_link"
           = t ".forgot"
-      = f.submit  "#{t '.signin'}", class: "btn btn-large btn-primary loginbutton"
+      = f.submit  "#{t '.signin'}", class: "btn btn-large btn-primary login_right_button"
 
       div style="clear:both;"
+
+  div.forgot_pass_box
+    h5 = t ".forgot_header_html"
+    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { method: :post, class: "form-horizontal"}, remote: true) do |f|
+      fieldset
+        = render 'layouts/flash', flash: flash, id: "forgot_flash"
+        div.control-group
+          = f.label :email, nil, class: "control-label"
+          div.controls
+            = f.email_field :email
+      = link_to "#{t '.forgot_back'}", "#", class: "btn btn-large login_left_button", id: "back_to_login_button"
+      = f.submit "#{t '.forgot_send'}", class: "btn animated btn-large btn-primary login_right_button",
+      'data-loading-text'=> "#{t '.forgot_sending'}", 'data-complete-text'=> "#{t '.forgot_send'}"

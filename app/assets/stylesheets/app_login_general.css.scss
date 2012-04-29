@@ -1,7 +1,29 @@
 @import "general";
 
+@mixin whitebox {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: #fff 0px 0px 5px;
+  border: 1px solid #a1a1a1;
+
+  form {
+    margin: 10px 20px 0 0;
+
+    .control-label {
+      width: 80px !important;
+      font-size: 16px !important;
+    }
+
+    .controls {
+      margin-left: 100px !important;
+    }
+  }
+}
+
 body {
   background-image: url(denim.png);
+  overflow: hidden;
 }
 
 #wrapper_login {
@@ -35,38 +57,41 @@ body {
 }
 
 .login_box {
-  background-color: white;
   margin: 0 auto;
   width: 420px;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: #fff 0px 0px 5px;
-  border: 1px solid #a1a1a1;
+  position: relative;
+  float: left;
+  left: 255px;
+  @include whitebox;
 }
 
-.loginbutton {
+.login_right_button {
   margin-top: 5px;
   float: right;
-  clear: both;
 }
 
-#login_form {
-  margin: 10px 20px 0 0;
-
-  .control-label {
-    width: 80px !important;
-    font-size: 16px !important;
-  }
-
-  .controls {
-    margin-left: 100px !important;
-  }
+.login_left_button {
+  margin-top: 5px;
+  float: left;
 }
 
 .forgot_pass_link {
   font-size: 12px;
   color: #666;
   text-decoration: none;
+}
+
+.forgot_pass_box {
+  @include whitebox;
+  float: left;
+  position: relative;
+  left: 2000px;
+
+  form {
+    input[type="email"] {
+      width: 300px !important;
+    }
+  }
 }
 
 

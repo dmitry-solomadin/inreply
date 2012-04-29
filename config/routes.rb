@@ -3,7 +3,8 @@ Inreply::Application.routes.draw do
     root to: "pages#home"
 
     devise_for :users, controllers: {sessions: "users/sessions",
-                                     registrations: "registrations"}
+                                     registrations: "registrations",
+                                     passwords: "passwords"}
 
     resources :contacts, only: [:new, :create]
 

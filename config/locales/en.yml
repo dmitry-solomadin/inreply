@@ -19,6 +19,8 @@ en:
       price: Price
       contacts: Contacs
       log_in: Log in
+      log_out: Log out
+      dashboard: Dashboard
       registration: Sign up
   pages:
     home:
@@ -95,3 +97,10 @@ en:
        greeting: Welcome back!
        forgot: Forgotten your password?
        signin: Sign in
+       forgot_header_html: Enter your email and we will send<br/> you password recovery instructions
+       forgot_send: Send
+       forgot_sending: Sending...
+       forgot_back: Back
+  passwords:
+    no_such_user: There is no user with such email
+    reset_success: Instructions has been sent

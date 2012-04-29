@@ -29,6 +29,8 @@ ru:
       price: Цены
       contacts: Контакты
       log_in: Войти
+      log_out: Выйти
+      dashboard: Dashboard
       registration: Регистрация
   pages:
     home:
@@ -118,3 +120,10 @@ ru:
         greeting: Добро пожаловать!
         forgot: Забыли пароль?
         signin: Войти
+        forgot_header_html: Введите ваш email и мы отправим вам<br/> инструкцию по восстановлению пароля
+        forgot_send: Отправить
+        forgot_sending: Отправляем...
+        forgot_back: Назад
+  passwords:
+    no_such_user: Нет пользователя с таким email.
+    reset_success: Инструкции отправлены.
