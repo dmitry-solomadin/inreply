@@ -15,6 +15,11 @@ ru:
       contact_message:
         email: Email
         message: Сообщение
+  activerecord:
+    attributes:
+      user:
+        email: Email
+        password: Пароль
   layouts:
     public:
       title: in:reply — начните слушать своих клиентов!
@@ -107,3 +112,9 @@ ru:
       better_html: Мы хотим сделать ваш бизнес <span class="r">лучше</span>!
       send: Отправить
       flash_success: Письмо отправлено
+  users:
+    sessions:
+      new:
+        greeting: Добро пожаловать!
+        forgot: Забыли пароль?
+        signin: Войти

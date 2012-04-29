@@ -15,7 +15,7 @@
 //= require bootstrap
 //= require rails.validations
 //= require rails.validations.custom
-//= require_tree .
+//= require_directory .
 
 
 

@@ -1,4 +1,4 @@
-@import 'bootstrap';
+@import "general";
 
 body {
   background-image: url(denim.png);
@@ -7,16 +7,23 @@ body {
 #wrapper_login {
   margin: 0 auto;
   overflow: visible;
-  width: 960px;
   text-align: center;
+  width: 960px;
+}
 
-  #wrapper_login_logo {
-    width: 420px;
+#wrapper_login_logo {
+  margin: 0 auto;
+  overflow: visible;
+  text-align: center;
+  width: 400px;
+
+  a {
+    margin-bottom: 10px;
   }
 }
 
 .inreply_logo_login {
-  background: url(/images/logo.png) -12px 0;
+  background: url(logo.png) -12px 0;
   display: block;
   height: 70px;
   text-indent: -9999px;
@@ -29,17 +36,37 @@ body {
 
 .login_box {
   background-color: white;
-  margin-top: 10px;
+  margin: 0 auto;
   width: 420px;
-  height: 210px;
   border-radius: 8px;
   padding: 10px;
   box-shadow: #fff 0px 0px 5px;
   border: 1px solid #a1a1a1;
 }
 
-#login_form {
-  float: left;
-  position: relative;
-  left: 255px;
+.loginbutton {
+  margin-top: 5px;
+  float: right;
+  clear: both;
 }
+
+#login_form {
+  margin: 10px 20px 0 0;
+
+  .control-label {
+    width: 80px !important;
+    font-size: 16px !important;
+  }
+
+  .controls {
+    margin-left: 100px !important;
+  }
+}
+
+.forgot_pass_link {
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+}
+
+

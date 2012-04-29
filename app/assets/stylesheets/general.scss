@@ -1,0 +1,163 @@
+@import "bootstrap";
+
+$grayMediumLight: #eaeaea;
+$inpink: rgb(250, 25, 125);
+$inblue: rgb(48, 135, 178);
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 130%;
+  text-shadow: 2px 2px 2px #E6E6E6;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 23px;
+  font-weight: normal;
+  line-height: 130%;
+  text-shadow: 2px 2px 2px #E6E6E6;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+h5 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  line-height: 130%;
+  text-shadow: 2px 2px 2px #E6E6E6;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "nimbus-sans";
+}
+
+.nav a {
+  font-family: "nimbus-sans";
+}
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "deja-rip";
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+::selection {
+  background: #FA197D;
+  color: white;
+  text-shadow: none;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+/* miscellaneous */
+
+.r {
+  color: $inpink;
+}
+
+.b {
+  color: $inblue;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  display: none;
+  margin-top: 20px;
+  @include box_sizing;
+}
+
+.field_with_errors {
+  display: inline;
+  padding: 0 !important;
+}
+
+#error_explanation {
+  ul {
+    list-style: disc !important;
+    margin: 5px 0 0 25px !important;
+  }
+}

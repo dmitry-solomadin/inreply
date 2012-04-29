@@ -89,3 +89,9 @@ en:
       better_html: We want to make your business <span class='r'>better</span>!
       send: Send
       flash_success: Email has been successfully sent.
+  users:
+   sessions:
+     new:
+       greeting: Welcome back!
+       forgot: Forgotten your password?
+       signin: Sign in

@@ -5,8 +5,9 @@ html
     = render 'layouts/shim'
     = stylesheet_link_tag "public", media: "all"
     = javascript_include_tag "application"
+    = javascript_include_tag params[:controller] + "/" + params[:controller]
     = csrf_meta_tags
-body.eng
+body
   = render 'layouts/header'
   div.container.main
     - flash.each do |key, value|

@@ -3,23 +3,24 @@ div#wrapper_login
     = link_to "in:reply", root_path, class: "inreply_logo_login"
 
   div style="clear:both;"
-  = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {id: "login_form"}) do |f|
-    div.login_box
-      h4 qwe
-      table.form.formround.formlogin cellspacing="10"
-        tr
-          td
-            = f.label :email
-          td
+  div.login_box
+    h4 = t ".greeting"
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name),
+               :html => {id: "login_form", class: "form-horizontal"}) do |f|
+      fieldset
+        - flash.each do |key, value|
+          = content_tag :div, value, class: "alert alert-#{key}"
+        div.control-group
+          = f.label :email, nil, class: "control-label"
+          div.controls
             = f.email_field :email
-        tr
-          td
-            = f.label :password
-          td
+        div.control-group
+          = f.label :password, nil, class: "control-label"
+          div.controls
             = f.password_field :password
       div style="text-align: right;"
-        a href="javascript:showForgotPass();" class="forgotPassLink"
-          ' forgot pass
-      = f.submit "Sign in"
+        a href="javascript:showForgotPass();" class="forgot_pass_link"
+          = t ".forgot"
+      = f.submit  "#{t '.signin'}", class: "btn btn-large btn-primary loginbutton"
 
       div style="clear:both;"

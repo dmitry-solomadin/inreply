@@ -107,6 +107,10 @@
     padding: 10px 10px 10px 0 !important;
     margin-bottom: 0px !important;
     @include transition(background .4s);
+
+    .field_with_errors {
+      padding: 0 !important;
+    }
   }
 
   .form-actions {
