@@ -5,8 +5,7 @@ html
     = render 'layouts/shim'
     = stylesheet_link_tag "app_login", media: "all"
     = javascript_include_tag "application"
-    = javascript_include_tag collect_controller_related
     = csrf_meta_tags
-body
+body data-controller="#{params[:controller]}"
   div.container.main
     = yield

@@ -5,10 +5,8 @@ html
     = render 'layouts/shim'
     = stylesheet_link_tag "public", media: "all"
     = javascript_include_tag "application"
-    /! This causes a bug that resource not found. Fix.
-    = javascript_include_tag collect_controller_related
     = csrf_meta_tags
-body
+body data-controller="#{params[:controller]}"
   = render 'layouts/header'
   div.container.main
     = render 'layouts/flash', flash: flash

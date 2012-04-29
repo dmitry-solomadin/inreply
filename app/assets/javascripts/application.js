@@ -15,16 +15,7 @@
 //= require bootstrap
 //= require rails.validations
 //= require rails.validations.custom
-//= require_directory .
-
-$(document).bind('ajaxSend', function(e, request, options) {
-    $('[data-loading-text]').button('loading');
-});
-
-$(document).bind('ajaxComplete', function(e, request, options) {
-    $('[data-loading-text]').button('complete');
-});
-
-
+//= require general
+//= require_tree .
 
 
