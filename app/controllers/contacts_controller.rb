@@ -11,9 +11,11 @@ class ContactsController < ApplicationController
     if @message.valid?
       ContactMailer.contact(@message).deliver
       flash.now[:success] = t "contacts.new.flash_success"
-      render 'new'
-    else
-      render 'new'
+    end
+
+    respond_to do |format|
+      format.html { render 'new' }
+      format.js { render layout: false }
     end
   end
 end

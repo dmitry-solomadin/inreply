@@ -113,6 +113,7 @@ ru:
                       или же позвонить по телефону <span class="r">(067) 7-888-937</span>
       better_html: Мы хотим сделать ваш бизнес <span class="r">лучше</span>!
       send: Отправить
+      sending: Отправляем...
       flash_success: Письмо отправлено
   users:
     sessions:

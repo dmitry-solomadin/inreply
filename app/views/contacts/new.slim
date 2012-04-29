@@ -7,7 +7,7 @@ div.box_content
   h3.contact-heading = t ".better_html"
 
 = form_for @message, html: {class: "form-horizontal contact-form"}, url: { action: "create" },
-           validate: true do |f|
+           validate: true, remote: true do |f|
   fieldset
     = render 'shared/error_messages', object: @message
     div.control-group
@@ -21,4 +21,5 @@ div.box_content
         = f.text_area :message
 
     div.form-actions
-      = f.submit "#{t '.send'}", class: "btn btn-large btn-primary"
+      = f.submit "#{t '.send'}", class: "btn btn-large btn-primary", 'data-loading-text' => "#{t '.sending'}",
+      'data-complete-text' => "#{t '.send'}"

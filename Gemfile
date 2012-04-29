@@ -11,6 +11,7 @@ gem 'slim'
 gem 'json'
 gem 'client_side_validations'
 gem 'devise'
+gem 'heroku'
 
 # Gems used only for assets and not required
 # in production environments by default.

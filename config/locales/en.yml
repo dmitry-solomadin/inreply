@@ -90,6 +90,7 @@ en:
                        info.inreply@gmail.com'
       better_html: We want to make your business <span class='r'>better</span>!
       send: Send
+      sending: Sending...
       flash_success: Email has been successfully sent.
   users:
    sessions:
