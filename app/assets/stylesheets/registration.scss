@@ -1,0 +1,22 @@
+.registration_form {
+  .control-label {
+    width: 125px !important;
+  }
+
+  .controls {
+    input {
+      width: 300px !important;
+    }
+  }
+}
+
+.form_separator {
+  background: url(hr1.png) no-repeat -120px 100%;
+  margin-bottom: 15px;
+
+  h4 {
+    display: inline;
+    position: relative;
+    left: 10px;
+  }
+}
