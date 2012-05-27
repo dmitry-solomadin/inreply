@@ -1,35 +1,81 @@
 h3 = t ".reg_header"
 
-= form_tag registration_path(resource_name), class: "form-horizontal registration_form", validate: true do
+= form_for Account.new, html: {class: "form-horizontal registration_form"}, url: {action: :create}, remote:true, validate:true do |f|
   fieldset
-    div.form_separator
-      img src="/assets/number1.jpg"
-      h4 = t ".create_account"
-    div.control-group
-      = label_tag 'user[email]', "#{t '.email'}", class: "control-label"
-      div.controls
-        = text_field_tag 'user[email]', (params[:user][:email] if params[:user]), placeholder: "#{t '.email_placeholder'}"
-    div.control-group
-      = label_tag 'user[password]', "#{t '.password'}", class: "control-label"
-      div.controls
-        = password_field_tag 'user[password]', nil, placeholder: "#{t '.password_placeholder'}"
-    div.control-group
-      = label_tag 'user[password_confirmation]', "#{t '.password_confirmation'}", class: "control-label"
+    = render 'shared/error_messages', object: @saved_models
 
-      div.controls
-         = password_field_tag 'user[password_confirmation]', nil, placeholder: "#{t '.password_confirmation_placeholder'}"
-    div.control-group
-      = label_tag 'user[phone]', "#{t '.phone'}", class: "control-label"
-      div.controls
-         = text_field_tag 'user[phone]', (params[:user][:phone] if params[:phone]), placeholder: "#{t '.phone_placeholder'}"
-    div.control-group
-      = label_tag 'user[name]', "#{t '.name'}", class: "control-label"
-      div.controls
-         = text_field_tag 'user[name]', (params[:user][:name] if params[:name]), placeholder: "#{t '.name_placeholder'}"
+    = f.fields_for User.new do |usr|
+      div.form_separator
+        img src="/assets/number1.jpg"
+        h4 = t ".create_account"
+      div.control-group
+        = usr.label :email, "#{t '.email'}", class: "control-label"
+        div.controls
+          = usr.text_field  :email, placeholder: "#{t '.email_placeholder'}"
+      div.control-group
+        = usr.label :password, "#{t '.password'}", class: "control-label"
+        div.controls
+          = usr.password_field :password, placeholder: "#{t '.password_placeholder'}"
+      div.control-group
+        = usr.label :password_confirmation, "#{t '.password_confirmation'}", class: "control-label"
+        div.controls
+          = usr.password_field :password_confirmation, placeholder: "#{t '.password_confirmation_placeholder'}"
+      div.control-group
+        = usr.label :phone, "#{t '.phone'}", class: "control-label"
+        div.controls
+          = usr.text_field :phone, placeholder: "#{t '.phone_placeholder'}"
+      div.control-group
+        = usr.label :name, "#{t '.name'}", class: "control-label"
+        div.controls
+          = usr.text_field :name, placeholder: "#{t '.name_placeholder'}"
+
+    = f.fields_for Location.new do |loc|
+      div#location_data
+        div.form_separator
+          img src="/assets/number2.jpg"
+          h4 = t ".add_locations"
+        div#location-top-tr.control-group
+          = loc.label :name, "#{t '.location_name'}", class: "control-label"
+          div.controls
+            = loc.text_field :name, placeholder: "#{t '.location_name_placeholder'}", id: "location_name0"
+        div.control-group
+          = loc.label :address, "#{t '.location_address'}", class: "control-label"
+          div.controls
+            = loc.text_field :address, placeholder: "#{t '.location_address_placeholder'}", id: "location_address0"
+        div.control-group
+          = loc.label :city, "#{t '.location_city'}", class: "control-label"
+          div.controls
+            = loc.text_field :city, placeholder: "#{t '.location_city_placeholder'}", id: "location_city0"
+        div.control-group
+          div.controls#add_location
+            a href="#" id="add_location_button" class="btn btn-large" = t ".add_location_button"
+            div.add_loc_exp = t ".add_loc_exp_html"
+          div.controls#edit_location style="display:none;"
+            a href="#" onclick="saveLocation();" class="btn btn-large" = t ".save_location_button"
+            a href="#" onclick="cancelLocation();" class="btn btn-large" = t ".cancel_location_button"
+    div#location_holder style="display:none"
+      span.loc_text_gray_span = t ".use_for_next"
+      table#locationTable
+        /= render 'location'
+        tr
+          td colspan="2"
+            span.locTextGraySpan
+              = t ".loc_entered"
+              span#locationCount 0
+            br
+            span.loc_text_gray_span = t ".press_start"
+
+    div style="clear:both"
+
     div.form_separator
-      img src="/assets/number2.jpg"
-      h4 = t ".add_locations"
+      img src="/assets/number3.jpg"
+      h4 = t ".payment"
+    div.txt
+      = t ".payment_details"
 
     div.form-actions
-      = submit_tag "#{t '.submit'}", class: "btn btn-large btn-primary", 'data-loading-text' => "#{t '.sending'}",
-      'data-complete-text' => "#{t '.send'}"
+      = f.submit "#{t '.submit'}", class: "btn btn-large btn-primary", 'data-loading-text' => "#{t '.submitting'}",
+      'data-complete-text' => "#{t '.submit'}"
+
+    table#locationTemplate style="display:none"
+      = render 'location'

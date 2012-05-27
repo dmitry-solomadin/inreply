@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title = t ".title"
+    = render 'layouts/shim'
+    = stylesheet_link_tag "public", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+body data-controller="#{params[:controller]}"
+  div.container.main
+    = render 'layouts/flash', flash: flash
+    = yield
+    = debug params if Rails.env.development?

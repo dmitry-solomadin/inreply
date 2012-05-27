@@ -10,7 +10,7 @@ header.navbar.navbar-fixed-top
           li = link_to( "#{t '.contacts'}", contacts_path, class: "menu" )
           - if user_signed_in?
             li = link_to( "#{t '.log_out'}", destroy_user_session_path, method: :delete, class: "menu" )
-            li = link_to( "#{t '.dashboard'}", "#", class: "menu r" )
+            li = link_to( "#{t '.dashboard'}", dashboard_path, class: "menu r" )
           - else
             li = link_to( "#{t '.log_in'}", new_user_session_path, class: "menu" )
             li = link_to( "#{t '.registration'}", new_user_registration_path, class: "menu r" )

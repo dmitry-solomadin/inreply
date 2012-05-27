@@ -114,6 +114,9 @@ en:
       password_confirmation: Repeat password
       name: Name
       phone: Phone
+      location_name: Location name
+      location_address: Address
+      location_city: City
       add_locations: Add locations
       submit: Lets start using in:reply
       email_placeholder: 'Example: info.inreply@gmail.com'
@@ -121,4 +124,14 @@ en:
       password_confirmation_placeholder: Repeat password
       name_placeholder: 'Example: John Smith'
       phone_placeholder: 'Example: +3 (067) 7-888-937'
+      location_name_placeholder: 'Example: in:reply'
+      location_address_placeholder: 'Example: 20 Park Plaza Suite 1200'
+      location_city_placeholder: 'Example: Boston'
+      add_location_button: Add location
+      add_loc_exp_html: You can always do it later on dashboard
+      payment_details: You can pay for you account after registration and trial period expiration.
+      use_for_next: 'I want to use in:reply for following locations:'
+      loc_entered: 'Locations entered:'
+      press_start: Press &laquo;start using&raquo; button to continue.
+
 

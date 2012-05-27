@@ -12,6 +12,7 @@ Inreply::Application.routes.draw do
     match '/contacts', to: 'contacts#new'
     match "/why_us", to: "pages#why_us"
     match "/pricing", to: "pages#pricing"
+    match "/dashboard", to: "dashboard#index"
   end
 
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"),

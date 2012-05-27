@@ -20,3 +20,28 @@
     left: 10px;
   }
 }
+
+.add_loc_exp {
+  color: #a1a1a1;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+#location_holder {
+  float: right;
+}
+
+#location_data {
+  float: left;
+}
+
+.loc_text_gray_span {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 130%;
+  text-shadow: 2px 2px 2px #E6E6E6;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  color: #666;
+}
