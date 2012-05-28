@@ -1,23 +1,22 @@
 - location_index_present = local_assigns.has_key? :tlocation_index
 - location_present = local_assigns.has_key? :tlocation
 
-tr.locationTr style="border-bottom: 1px solid #999;height: 0;"
+tr.locationTr
   td.locationTdLeft
     div.locationData
       img[src="/assets/pencil.png" width="16" height="16"
-        onclick="editLocation(this);"
+        onclick="window.locationManager.edit(this);"
         onmouseout="this.src = '/assets/pencil.png';"
         onmouseover="this.src = '/assets/pencil-color.png';"]
       img[src="/assets/cross.png" width="16" height="16"
-        onclick="removeLocationDiv($(this).parents('tr:first'));"
+        onclick="window.locationManager.remove($(this).parents('tr:first'));"
         onmouseout="this.src = '/assets/cross.png';"
         onmouseover="this.src = '/assets/cross-color.png';"]
   td.locationTdRight
     div.locationData
       input.locationName type="hidden"
-        = "name=\"locationName#{location_index}\"" if location_index_present
-        = "value=\"#{location.name}\"" if location_present
-
+        = "name=\"locationName#{tlocation_index}\"" if location_index_present
+        = "value=\"#{tlocation.name}\"" if location_present
       input.locationAddress type="hidden"
         = "name=\"address#{tlocation_index}\"" if location_index_present
         = "value=\"#{tlocation.address}\"" if location_present

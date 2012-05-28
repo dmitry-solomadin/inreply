@@ -29,6 +29,7 @@
 
 #location_holder {
   float: right;
+  margin-top: 35px;
 }
 
 #location_data {
@@ -36,12 +37,40 @@
 }
 
 .loc_text_gray_span {
-  font-family: Verdana, Geneva, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 130%;
-  text-shadow: 2px 2px 2px #E6E6E6;
   margin-top: 5px;
-  margin-bottom: 0px;
-  color: #666;
+  margin-bottom: 3px;
+  margin-left: 0;
+  color: #4e4e4e;
+}
+
+#location_table {
+  clear: both;
+}
+
+.locationTr {
+  border: 1px solid #e3e3e3;
+  height: 0;
+}
+
+.locationTdLeft {
+  border: 1px solid #e3e3e3;
+  width: 16px;
+  padding: 4px;
+}
+
+.locationTdRight {
+  padding-left: 4px;
+}
+
+.locationNameTemplate {
+  margin-top: 0 !important;
+}
+
+.placeholder {
+  opacity: 0.5;
+  background-color: rgb(48, 135, 178);
+  position: absolute;
 }

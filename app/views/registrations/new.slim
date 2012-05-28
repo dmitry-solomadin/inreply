@@ -48,22 +48,23 @@ h3 = t ".reg_header"
             = loc.text_field :city, placeholder: "#{t '.location_city_placeholder'}", id: "location_city0"
         div.control-group
           div.controls#add_location
-            a href="#" id="add_location_button" class="btn btn-large" = t ".add_location_button"
+            a#add_location_button.btn.btn-large href="#" = t ".add_location_button"
             div.add_loc_exp = t ".add_loc_exp_html"
           div.controls#edit_location style="display:none;"
-            a href="#" onclick="saveLocation();" class="btn btn-large" = t ".save_location_button"
-            a href="#" onclick="cancelLocation();" class="btn btn-large" = t ".cancel_location_button"
+            a.btn.btn-large href="#" onclick="window.locationManager.confirmEdit(); return false;" style="margin-right:5px" = t ".save_location_button"
+            a.btn.btn-large href="#" onclick="window.locationManager.cancelEdit(); return false;" = t ".cancel_location_button"
     div#location_holder style="display:none"
       span.loc_text_gray_span = t ".use_for_next"
-      table#locationTable
+      table#location_table
         /= render 'location'
         tr
           td colspan="2"
-            span.locTextGraySpan
+            span.loc_text_gray_span
               = t ".loc_entered"
+              ' &nbsp;
               span#locationCount 0
             br
-            span.loc_text_gray_span = t ".press_start"
+            span.loc_text_gray_span = t ".press_start_html"
 
     div style="clear:both"
 

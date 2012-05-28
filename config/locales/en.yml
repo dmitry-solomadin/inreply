@@ -132,6 +132,8 @@ en:
       payment_details: You can pay for you account after registration and trial period expiration.
       use_for_next: 'I want to use in:reply for following locations:'
       loc_entered: 'Locations entered:'
-      press_start: Press &laquo;start using&raquo; button to continue.
+      press_start_html: Press &laquo;start using&raquo; button to continue.
+      save_location_button: Save
+      cancel_location_button: Cancel
 
 
