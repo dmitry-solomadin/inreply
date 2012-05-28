@@ -128,3 +128,34 @@ ru:
   passwords:
     no_such_user: Нет пользователя с таким email.
     reset_success: Инструкции отправлены.
+  registrations:
+    new:
+      reg_header: Регистрация
+      create_account: Создайте акаунт
+      email: Электронный адрес
+      password: Пароль
+      password_confirmation: Повторите пароль
+      name: Ф.И.О.
+      phone: Телефон
+      location_name: Название
+      location_address: Адрес
+      location_city: Город
+      add_locations: Добавьте местоположение
+      submit: Начать использовать!
+      email_placeholder: 'Пример: info.inreply@gmail.com'
+      password_placeholder: Пароль
+      password_confirmation_placeholder: Повторите пароль
+      name_placeholder: 'Пример: Вася Пупкин'
+      phone_placeholder: 'Пример: +3 (067) 7-888-937'
+      location_name_placeholder: 'Пример: in:reply'
+      location_address_placeholder: 'Пример: Горького 48, офис 404'
+      location_city_placeholder: 'Пример: Киев'
+      add_location_button: Еще одно
+      add_loc_exp_html: Вы всегда сможете сделать это позже в админ панели
+      payment_details: Вы сожете заплатить за свой акаунт после истечения срока бесплатного использования
+      use_for_next: 'Я хочу использовать in:reply для следующих местоположений:'
+      loc_entered: 'Местоположений введено:'
+      press_start_html: Нажмите &laquo;начать использовать&raquo; чтобы продолжить.
+      save_location_button: Сохранить
+      cancel_location_button: Отмена
+      payment: Оплата
