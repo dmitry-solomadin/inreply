@@ -1,16 +1,19 @@
-- unless object.nil?
-  - if object.kind_of? Array
-    div#error_explanation
-      div.alert.alert-error
-        = t "error_messages.correct"
-        ul
-        - object.each do |object_node|
-          - if object_node.errors.any?
-            = render 'shared/error_messages_list_msg', object: object_node
-  - else
-    - if object.errors.any?
+div#form_errors_div
+  - unless object.nil?
+    - if object.kind_of? Array
       div#error_explanation
         div.alert.alert-error
           = t "error_messages.correct"
           ul
-            = render 'shared/error_messages_list_msg', object: object
+          - object.each do |object_node|
+            - if object_node.errors.any?
+              - object_node.errors.full_messages.each do |msg|
+                li #{msg}
+    - else
+      - if object.errors.any?
+        div#error_explanation
+          div.alert.alert-error
+            = t "error_messages.correct"
+            ul
+              - object.errors.full_messages.each do |msg|
+                li #{msg}

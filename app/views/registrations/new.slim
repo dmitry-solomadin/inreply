@@ -1,17 +1,17 @@
 h3 = t ".reg_header"
 
-= form_for Account.new, html: {class: "form-horizontal registration_form"}, url: {action: :create}, remote:true, validate:true do |f|
+= form_for @account, html: {class: "form-horizontal registration_form"}, url: {action: :create}, remote:true, validate:true do |f|
   fieldset
     = render 'shared/error_messages', object: @saved_models
 
-    = f.fields_for User.new do |usr|
+    = f.fields_for :users do |usr|
       div.form_separator
         img src="/assets/number1.jpg"
         h4 = t ".create_account"
       div.control-group
         = usr.label :email, "#{t '.email'}", class: "control-label"
         div.controls
-          = usr.text_field  :email, placeholder: "#{t '.email_placeholder'}"
+          = usr.text_field :email, placeholder: "#{t '.email_placeholder'}"
       div.control-group
         = usr.label :password, "#{t '.password'}", class: "control-label"
         div.controls
@@ -29,7 +29,7 @@ h3 = t ".reg_header"
         div.controls
           = usr.text_field :name, placeholder: "#{t '.name_placeholder'}"
 
-    = f.fields_for Location.new do |loc|
+    = f.fields_for :locations do |loc|
       div#location_data
         div.form_separator
           img src="/assets/number2.jpg"
@@ -71,8 +71,7 @@ h3 = t ".reg_header"
     div.form_separator
       img src="/assets/number3.jpg"
       h4 = t ".payment"
-    div.txt
-      = t ".payment_details"
+    div.txt = t ".payment_details"
 
     div.form-actions
       = f.submit "#{t '.submit'}", class: "btn btn-large btn-primary", 'data-loading-text' => "#{t '.submitting'}",

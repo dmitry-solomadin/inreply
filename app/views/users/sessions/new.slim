@@ -5,8 +5,7 @@ div#wrapper_login
   div style="clear:both;"
   div.login_box
     h4 = t ".greeting"
-    = form_for(resource, :as => resource_name, :url => session_path(resource_name),
-               :html => {id: "login_form", class: "form-horizontal"}) do |f|
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {id: "login_form", class: "form-horizontal"}) do |f|
       fieldset
         = render 'layouts/flash', flash: flash
         div.control-group

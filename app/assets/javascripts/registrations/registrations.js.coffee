@@ -43,11 +43,11 @@ class LocationManager
       locationDiv = $("#locationTemplate").find("tr").clone()
       locationDiv.find(".locationNameTemplate").html(locationName)
 
-      locationDiv.find(".locationName")[0].name = "locationName" + newLocationCount
+      locationDiv.find(".locationName")[0].name = "location[#{newLocationCount}][name]"
       locationDiv.find(".locationName")[0].value = locationName
-      locationDiv.find(".locationAddress")[0].name = "address" + newLocationCount
+      locationDiv.find(".locationAddress")[0].name = "location[#{newLocationCount}][address]"
       locationDiv.find(".locationAddress")[0].value = locationAddress
-      locationDiv.find(".locationCity")[0].name = "city" + newLocationCount
+      locationDiv.find(".locationCity")[0].name = "location[#{newLocationCount}][city]"
       locationDiv.find(".locationCity")[0].value = locationCity
 
       locationDiv.find(".locationWholeAddressTemplate").html(locationCity + ", " + locationAddress)

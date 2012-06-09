@@ -142,6 +142,7 @@ ru:
       location_city: Город
       add_locations: Добавьте местоположение
       submit: Начать использовать!
+      submitting: Отправка...
       email_placeholder: 'Пример: info.inreply@gmail.com'
       password_placeholder: Пароль
       password_confirmation_placeholder: Повторите пароль

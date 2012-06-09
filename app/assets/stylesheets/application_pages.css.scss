@@ -1,0 +1,10 @@
+@import "public_general";
+@import "dashboard";
+
+.main {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  @include border-radius(4px);
+  @include box-shadow(0 0 5px #a1a1a1);
+}

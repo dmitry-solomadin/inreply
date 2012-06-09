@@ -15,13 +15,13 @@ tr.locationTr
   td.locationTdRight
     div.locationData
       input.locationName type="hidden"
-        = "name=\"locationName#{tlocation_index}\"" if location_index_present
+        = "name=\"location#{tlocation_index}[name]\"" if location_index_present
         = "value=\"#{tlocation.name}\"" if location_present
       input.locationAddress type="hidden"
-        = "name=\"address#{tlocation_index}\"" if location_index_present
+        = "name=\"location#{tlocation_index}[address]\"" if location_index_present
         = "value=\"#{tlocation.address}\"" if location_present
       input.locationCity type="hidden"
-        = "name=\"city#{tlocation_index}\"" if location_index_present
+        = "name=\"location#{tlocation_index}[city]\"" if location_index_present
         = "value=\"#{tlocation.city}\"" if location_present
       h5.locationNameTemplate = tlocation.name if location_present
       span.locationWholeAddressTemplate = (tlocation.city + ", " + tlocation.address) if location_present

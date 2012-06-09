@@ -119,6 +119,7 @@ en:
       location_city: City
       add_locations: Add locations
       submit: Lets start using in:reply
+      submitting: Submitting...
       email_placeholder: 'Example: info.inreply@gmail.com'
       password_placeholder: Password
       password_confirmation_placeholder: Repeat password
